@@ -2,6 +2,11 @@ import { useState } from "react";
 import "./App.scss";
 
 import Img6 from "./assets/img6.jpg";
+import Img5 from "./assets/img5.jpg";
+import Img4 from "./assets/img4.jpg";
+import Img3 from "./assets/img3.jpg";
+import Img2 from "./assets/img2.jpg";
+import Img1 from "./assets/img1.jpg";
 
 function App() {
   return (
@@ -34,7 +39,7 @@ function App() {
                 </div>
               </div>
               <div className="item-img">
-                <img src={Img6} alt="multiple-vases" />
+                <img src={Img1} alt="single-vase" />
               </div>
             </div>
             <div className="item item-side">
@@ -47,7 +52,7 @@ function App() {
                 </div>
               </div>
               <div className="item-img">
-                <img src={Img6} alt="multiple-vases" />
+                <img src={Img2} alt="single-vase" />
               </div>
             </div>
             <div className="item item-side">
@@ -60,7 +65,7 @@ function App() {
                 </div>
               </div>
               <div className="item-img">
-                <img src={Img6} alt="multiple-vases" />
+                <img src={Img3} alt="single-vase" />
               </div>
             </div>
           </div>
@@ -90,7 +95,7 @@ function App() {
                 </div>
               </div>
               <div className="item-img">
-                <img src={Img6} alt="multiple-vases" />
+                <img src={Img4} alt="single-vase" />
               </div>
             </div>
             <div className="item item-side">
@@ -103,7 +108,7 @@ function App() {
                 </div>
               </div>
               <div className="item-img">
-                <img src={Img6} alt="multiple-vases" />
+                <img src={Img5} alt="single-vase" />
               </div>
             </div>
             <div className="item item-side">
@@ -116,40 +121,40 @@ function App() {
                 </div>
               </div>
               <div className="item-img">
-                <img src={Img6} alt="multiple-vases" />
+                <img src={Img6} alt="single-vase" />
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="header">
-        <div className="header-item header-item-1">
-          <div className="letter">
-            <div className="letter-wrapper">L</div>
+        <div className="header">
+          <div className="header-item header-item-1">
+            <div className="letter">
+              <div className="letter-wrapper">L</div>
+            </div>
+            <div className="letter">
+              <div className="letter-wrapper">G</div>
+            </div>
+            <div className="letter">
+              <div className="letter-wrapper">N</div>
+            </div>
+            <div className="letter">
+              <div className="letter-wrapper">T</div>
+            </div>
           </div>
-          <div className="letter">
-            <div className="letter-wrapper">G</div>
-          </div>
-          <div className="letter">
-            <div className="letter-wrapper">N</div>
-          </div>
-          <div className="letter">
-            <div className="letter-wrapper">T</div>
-          </div>
-        </div>
-        <div className="header-item header-item-2">
-          <div className="letter">
-            <div className="letter-wrapper">V</div>
-          </div>
-          <div className="letter">
-            <div className="letter-wrapper">A</div>
-          </div>
-          <div className="letter">
-            <div className="letter-wrapper">S</div>
-          </div>
-          <div className="letter">
-            <div className="letter-wrapper">E</div>
+          <div className="header-item header-item-2">
+            <div className="letter">
+              <div className="letter-wrapper">V</div>
+            </div>
+            <div className="letter">
+              <div className="letter-wrapper">A</div>
+            </div>
+            <div className="letter">
+              <div className="letter-wrapper">S</div>
+            </div>
+            <div className="letter">
+              <div className="letter-wrapper">E</div>
+            </div>
           </div>
         </div>
       </div>
