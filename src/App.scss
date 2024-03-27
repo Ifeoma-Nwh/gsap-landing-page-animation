@@ -63,7 +63,7 @@ nav {
 }
 
 .item-copy-wrapper {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   p {
     position: relative;
     margin-bottom: 0.25rem;
@@ -77,7 +77,7 @@ nav {
   .item-img {
     flex: 1;
     overflow: hidden;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
   }
 }
 
@@ -128,5 +128,5 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }

@@ -1,6 +1,6 @@
-import { useState } from "react";
 import "./App.scss";
 
+import Img7 from "./assets/img7.jpg";
 import Img6 from "./assets/img6.jpg";
 import Img5 from "./assets/img5.jpg";
 import Img4 from "./assets/img4.jpg";
@@ -8,12 +8,55 @@ import Img3 from "./assets/img3.jpg";
 import Img2 from "./assets/img2.jpg";
 import Img1 from "./assets/img1.jpg";
 
+import { useRef } from "react";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(useGSAP);
+
 function App() {
+  const navContainer = useRef();
+  const tl = useRef();
+
+  useGSAP(() => {
+    gsap.set(navContainer.current, { y: -100 });
+    gsap.set(".letter-wrapper", { y: 400 });
+    gsap.set(".item-copy-wrapper p", { y: 50 });
+    gsap.defaults({ duration: 1, ease: "power3.out" });
+
+    tl.current = gsap.timeline({ pause: true, delay: 0.5 });
+
+    tl.current
+      .to(".letter-wrapper", { y: 0, stagger: 0.1 })
+      .to(".header-item-1", { left: "12vw" })
+      .to(".header-item-2", { right: "8vw" }, "<")
+      .to(
+        ".item-main .item-img img",
+        { clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)" },
+        "<"
+      )
+      .to(".header-item-1", { left: 0, scale: 1 })
+      .to(".header-item-2", { right: 0, scale: 1 }, "<")
+      .to(".item-main .item-img img", { scale: 1 }, "<")
+      .to(
+        ".item-side .item-img",
+        {
+          clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%",
+          stagger: 0.1,
+        },
+        "<"
+      )
+      .to(".header", { bottom: "-2rem" }, "<")
+      .to(".item-copy-wrapper p", { y: 0, stagger: 0.05 }, "<")
+      .to("nav", { y: 0 }, "<");
+  });
+
   return (
     <>
-      <nav>
+      <nav ref={navContainer}>
         <div className="logo">
-          <a href="#">Lgnt Vase</a>
+          <a href="#">LGNT Vase</a>
         </div>
         <div className="nav-items">
           <a href="#">Home</a>
@@ -32,10 +75,10 @@ function App() {
             <div className="item item-side">
               <div className="item-copy">
                 <div className="item-copy-wrapper">
-                  <p>Lorem ipsum</p>
+                  <p>Vase blanc</p>
                 </div>
                 <div className="item-copy-wrapper">
-                  <p>Lorem ipsum</p>
+                  <p>(Collection white)</p>
                 </div>
               </div>
               <div className="item-img">
@@ -45,10 +88,10 @@ function App() {
             <div className="item item-side">
               <div className="item-copy">
                 <div className="item-copy-wrapper">
-                  <p>Lorem ipsum</p>
+                  <p>Vase gris</p>
                 </div>
                 <div className="item-copy-wrapper">
-                  <p>Lorem ipsum</p>
+                  <p>(Collection grey)</p>
                 </div>
               </div>
               <div className="item-img">
@@ -58,10 +101,10 @@ function App() {
             <div className="item item-side">
               <div className="item-copy">
                 <div className="item-copy-wrapper">
-                  <p>Lorem ipsum</p>
+                  <p>Vase belge</p>
                 </div>
                 <div className="item-copy-wrapper">
-                  <p>Lorem ipsum</p>
+                  <p>(Collection belge)</p>
                 </div>
               </div>
               <div className="item-img">
@@ -73,10 +116,10 @@ function App() {
             <div className="item item-main">
               <div className="item-copy">
                 <div className="item-copy-wrapper">
-                  <p>Lorem ipsum</p>
+                  <p>Vases sky</p>
                 </div>
                 <div className="item-copy-wrapper">
-                  <p>Lorem ipsum</p>
+                  <p>(Collection prime)</p>
                 </div>
               </div>
               <div className="item-img">
@@ -88,10 +131,10 @@ function App() {
             <div className="item item-side">
               <div className="item-copy">
                 <div className="item-copy-wrapper">
-                  <p>Lorem ipsum</p>
+                  <p>Vase pierre</p>
                 </div>
                 <div className="item-copy-wrapper">
-                  <p>Lorem ipsum</p>
+                  <p>(Collection stone)</p>
                 </div>
               </div>
               <div className="item-img">
@@ -101,10 +144,10 @@ function App() {
             <div className="item item-side">
               <div className="item-copy">
                 <div className="item-copy-wrapper">
-                  <p>Lorem ipsum</p>
+                  <p>Vase béton</p>
                 </div>
                 <div className="item-copy-wrapper">
-                  <p>Lorem ipsum</p>
+                  <p>(Collection concrete)</p>
                 </div>
               </div>
               <div className="item-img">
@@ -114,14 +157,14 @@ function App() {
             <div className="item item-side">
               <div className="item-copy">
                 <div className="item-copy-wrapper">
-                  <p>Lorem ipsum</p>
+                  <p>Vases jumeaux</p>
                 </div>
                 <div className="item-copy-wrapper">
-                  <p>Lorem ipsum</p>
+                  <p>(Collection twins)</p>
                 </div>
               </div>
               <div className="item-img">
-                <img src={Img6} alt="single-vase" />
+                <img src={Img7} alt="single-vase" />
               </div>
             </div>
           </div>
