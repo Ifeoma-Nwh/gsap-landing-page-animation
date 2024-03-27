@@ -1,8 +1,19 @@
-# React + Vite
+# Gsap animated landing page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page reveal animation with the useGsap() react hook.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+After cloning the project, install and start the project with npm
+
+```bash
+  npm install
+  npm start
+```
+
+or
+
+```bash
+  npm install
+  npm run dev
+```
